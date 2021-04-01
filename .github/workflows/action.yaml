@@ -5,7 +5,7 @@ on:
 
 jobs:
   testing_job1:
-    runs_on: ubuntu-latest
+    runs_on: [ubuntu-latest]
     strategy:
       matrix:
         text: ["hello", "hi", "sayonara"]
