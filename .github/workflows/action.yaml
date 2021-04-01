@@ -25,6 +25,9 @@ jobs:
             files: >
               b
     steps:
+      - name: normal step
+        run: |
+          echo miau
       - name: say_hello ${{ matrix.text.miau}}
         run: |
           echo ${{ matrix.text.files }}
