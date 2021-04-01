@@ -27,7 +27,7 @@ jobs:
     steps:
       - name: normal step
         run: |
-          echo miau
+          echo miau $RANDOM
       - name: say_hello ${{ matrix.text.miau}}
         run: |
           echo ${{ matrix.text.files }}
