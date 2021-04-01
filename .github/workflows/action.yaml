@@ -10,21 +10,21 @@ jobs:
       matrix:
         text:
           - miau: 6
-            files: 
-              - a
-              - b
-              - c
+            files: > 
+              a
+              b
+              c
           - miau: 2
             guau: 1
-            files: 
-              - d
-              - e
-              - m
+            files: >
+              d
+              e
+              m
           - miau: 4
             guau: 1
-            files: 
-              - b
+            files: >
+              b
     steps:
       - name: say_hello ${{ matrix.text.miau}}
         run: |
-          echo ${{ join(matrix.text.files,'-') }}
+          echo ${{ matrix.text.files }}
