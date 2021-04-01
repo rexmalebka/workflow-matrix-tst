@@ -8,7 +8,13 @@ jobs:
     runs-on: [ubuntu-latest]
     strategy:
       matrix:
-        text: ["hello", "hi", "sayonara"]
+        text:
+          - hello
+            miau: 6
+          - adios
+            miau: 2
+          - sayonara
+            miau: 4
     steps:
       - name: say_hello
         run: |
