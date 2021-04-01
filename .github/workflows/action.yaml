@@ -5,6 +5,8 @@ on:
 
 jobs:
   testing_job1:
+    outputs:
+      job_status: ${{ job.status }}
     runs-on: [ubuntu-latest]
     strategy:
       matrix:
@@ -32,8 +34,10 @@ jobs:
         run: |
           echo ${{ matrix.text.files }}
   job2:
+    needs: [testing_job1]
     runs-on: [ubuntu-latest]
     steps:
       - name: normal step
         run: |
           echo aaaaaaa
+          echo "${{ needs.testing_job1.outputs.job_status }}"
