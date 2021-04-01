@@ -10,12 +10,21 @@ jobs:
       matrix:
         text:
           - miau: 6
-            guau: 1
+            files: 
+              - a
+              - b
+              - c
           - miau: 2
             guau: 1
+            files: 
+              - d
+              - e
+              - m
           - miau: 4
             guau: 1
+            files: 
+              - b
     steps:
       - name: say_hello
         run: |
-          echo ${{ matrix.text }}
+          echo ${{ matrix.text.files }}
