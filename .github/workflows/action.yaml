@@ -10,7 +10,7 @@ jobs:
       matrix:
         text: ["hello", "hi", "sayonara"]
     steps:
-      - say_hello:
-        runs: |
-          echo ${{ matrix.text }}
+      - name: say_hello
+        run: |
+        echo ${{ matrix.text }}
 
