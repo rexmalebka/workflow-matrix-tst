@@ -27,4 +27,4 @@ jobs:
     steps:
       - name: say_hello
         run: |
-          echo ${{ matrix.text.files }}
+          echo ${{ join(matrix.text.files,'-') }}
