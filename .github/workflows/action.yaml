@@ -12,5 +12,4 @@ jobs:
     steps:
       - name: say_hello
         run: |
-        echo ${{ matrix.text }}
-
+          echo ${{ matrix.text }}
