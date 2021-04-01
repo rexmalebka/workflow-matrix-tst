@@ -9,12 +9,12 @@ jobs:
     strategy:
       matrix:
         text:
-          - hello
-            miau: 6
-          - adios
-            miau: 2
-          - sayonara
-            miau: 4
+          - miau: 6
+            guau: 1
+          - miau: 2
+            guau: 1
+          - miau: 4
+            guau: 1
     steps:
       - name: say_hello
         run: |
