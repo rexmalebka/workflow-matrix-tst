@@ -31,3 +31,9 @@ jobs:
       - name: say_hello ${{ matrix.text.miau}}
         run: |
           echo ${{ matrix.text.files }}
+  job2:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: normal step
+        run: |
+          echo aaaaaaa
