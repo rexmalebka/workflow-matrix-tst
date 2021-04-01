@@ -25,6 +25,6 @@ jobs:
             files: 
               - b
     steps:
-      - name: say_hello
+      - name: say_hello ${{ matrix.text.miau}}
         run: |
           echo ${{ join(matrix.text.files,'-') }}
