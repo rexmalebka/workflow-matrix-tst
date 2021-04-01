@@ -32,7 +32,7 @@ jobs:
           echo miau $RANDOM
       - name: say_hello ${{ matrix.text.miau}}
         run: |
-          echo "${{ [{'miau', 'guau'][ matrix.text.guau ] }}"
+          echo "${{ ['miau', 'guau'][ matrix.text.guau ] }}"
           echo ${{ matrix.text.files }}
   job2:
     needs: [testing_job1]
